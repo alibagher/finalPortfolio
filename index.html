@@ -114,6 +114,22 @@
         });
       });
     </script>
+
+
+    <!-- To offset the start of my name on mibile. -->
+    <script>
+      function syncBannerOffset() {
+        const banner = document.querySelector('.banner');
+        const h = banner.offsetHeight;
+        document.body.style.paddingTop = h + 'px';
+        document.querySelectorAll('section').forEach(sec => {
+          sec.style.scrollMarginTop = h + 'px';
+        });
+      }
+      window.addEventListener('load',  syncBannerOffset);
+      window.addEventListener('resize', syncBannerOffset);
+    </script>
+
   
   </body>
 </html>
