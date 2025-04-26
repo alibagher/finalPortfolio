@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Minimal by Steve Smith</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <!-- NAVIGATION BANNER -->
+      <nav class="banner">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- <li><a href="#research">Research</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+
+
+      <header>
+        <h1>Ali Bagheri</h1>
+        <!-- <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p> -->
+        <img src="Pic.JPG" alt="Italian Trulli">
+        <p>Master's of Computer Science at the University of Guelph. Bachelor's of Computer Science from the University of Waterloo.</p>
+        <ul>
+        
+          <li><a href="https://www.linkedin.com/in/alibagh/"><strong>Linkedin</strong></a></li>
+          <li><a href="https://github.com/alibagher"> <strong>GitHub</strong></a></li>
+          <li><a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing"><strong>Resume/CV</strong></a></li>
+        </ul>
+      </header>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>I am a student and researcher of Computer science. I am interested in computer graphics, image processing, machine learning and artificial 
+          intelligence. </p> I have industry experience with C++, Python, Javascript, 
+          <p>
+            
+          </p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <p> 
+            I have worked in the industry for 3+ years. I created a radiology system in C++, Python and Javascript. I also worked 
+            at Ford Motor Company for 2 years where I created user tools in Python and improved the chromium-based web engine in C++. 
+            I also developed expert-level knowledge of Git commands like cherry-pick etc.
+        </p>
+        <blockquote>
+
+          <p>More details on my  <a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing"><strong>Resume/CV</strong></a>. </p>
+        </blockquote>
+        
+      </section>
+    
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <p><b>Email Templates:</b> created using <b>Rust</b> and <b>PostgreSQL</b> for the backend and <b>React</b> for the front end, using the Docker platform. <br>
+              This is a customer feature from end to end for am online non-emergency reporting system. The purpose is manage and use email templates when responding to online report submissions <br>
+            </p>
+          </li>
+          <li><b>Osteoporosis Analysis:</b> Data science project that analyzes Osteoporosis data gathered from kaggle.
+            Prepared the data (cleaned and organized into DataFrame), analyzed the data using GroupBy in <b>Python</b>.<br>
+            Data was divided into Train-Test Split to use Machines learning algorithms such as kNN, and Random Forest to conduct further analysis.
+           </li>
+           <li>
+            <b>HeroTyper:</b> A user-friendly game in <b>Kotlin</b> using architecture principles and design patterns to create extensible program.
+           </li>
+           <li>
+            <b>Distributed File System: </b> A distributed file system using FUSE, allowing multiple clients to access and edit shared files locally.
+            Programmed in <b>C++</b>.
+           </li>
+        </ul>
+
+        <blockquote>More Projects on my <a href="https://github.com/alibagher"> <strong>GitHub</strong></a>.</blockquote>
+      </section>
+    
+      <!-- <section id="research">
+        <h2>Research</h2>
+        <p></p>
+      </section> -->
+    
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email me at a6bagher@uwaterloo.ca</p>
+      </section>
+
+      <footer>
+        <!-- <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p> -->
+        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+
+    <script>
+      document.querySelectorAll('.banner a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          document.querySelector(link.getAttribute('href'))
+                  .scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+  
+  </body>
+</html>
