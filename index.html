@@ -16,90 +16,99 @@
     <div class="wrapper">
 
       <!-- NAVIGATION BANNER -->
-      <nav class="banner">
+      <!-- <nav class="banner">
         <ul class="nav-list">
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About</a></li> 
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <!-- <li><a href="#research">Research</a></li> -->
+          <li><a href="#research">Research</a></li> 
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </nav> -->
 
 
 
       <header>
-        <h1>Ali Bagheri</h1>
+        <h1><a href="{{ "/" | absolute_url }}">Ali Bagheri</a></h1>
         <!-- <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p> -->
-        <!-- <img src="Pic.JPG" alt="Italian Trulli"> -->
-        <p>Master's of Computer Science at the University of Guelph. Bachelor's of Computer Science from the University of Waterloo.</p>
-        <ul>
-        
-          <li><a href="https://www.linkedin.com/in/alibagh/"><strong>Linkedin</strong></a></li>
-          <li><a href="https://github.com/alibagher"> <strong>GitHub</strong></a></li>
-          <li><a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing"><strong>Resume/CV</strong></a></li>
-        </ul>
+        <img src="docs/Pic.JPG" alt="Italian Trulli">
+        <p>
+          MsC, BCS of Computer Science at UoGuelph and UWaterloo. <br><br>
+          Contact: <a href="mailto:eylai@mit.edu">a6bagher [at] uwaterloo.ca</a><br><br>
+          <a href="https://www.linkedin.com/in/alibagh/" target="_blank"><bold>Linkedin</bold></a>, 
+          <a href="https://github.com/alibagher" target="_blank"> <bold>GitHub</bold></a> ,
+          <a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing" target="_blank" ><bold>CV</bold></a>
+        </p>
       </header>
 
       <section id="about">
-        <h2>About</h2>
-        <p>Hello,</p>
-        <p>I am a software developer and computer science student.
-          My interests are computer graphics, image processing, machine learning, and artificial intelligence. <br><br>
-          I have industry experience with embedded programming and full-stack development.
-        </p>
-        <p>Outside of programming, I love exercising, reading and studying psychololgy as a tool for self-improvement</p>
+        <!-- <h2>About</h2> -->
+        <p>I am a Master's student in Computer Science at the University of Guelph, specializing in the intersection of Human-Computer Interaction (HCI), Computer Graphics, and Augmented Reality. </p>
+        <p>Prior to my graduate studies, I earned a Bachelor of Computer Science from the University of Waterloo and gained industry experience in embedded systems programming and full-stack development.</p>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
-        <p> 
-          I have three years of experience. I developed a custom radiology software for a small clinic in Ontario.
-          I then worked at Ford Motor Company, where I created tools and enhanced Chromium-based web engine.
-        </p>
+        <p>With four years of professional software engineering experience, I have worked across a diverse range of environments. I spearheaded the development of a custom radiology software solution for a healthcare clinic in Ontario, and later at Ford Motor Company, I engineered internal tools and optimized their Chromium-based web engine.</p>
+        <p>My background also includes multiple diverse software engineering internships.</p>
         <blockquote>
-
-          <p>More details on my  <a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing"><strong>Resume/CV</strong></a>. </p>
+          <p>Check out my  <a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing" target="_blank">CV</a> </p>
+          <!-- <p>More details on my <a href="/docs/CV_Ali_Bagheri.pdf">CV</a> </p> -->
         </blockquote>
-      </section>
-    
-      <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <p><b>Email Templates:</b> created using Rust, PostgreSQL, React, and Docker. <br>
-              This is a customer feature from end to end for am online non-emergency reporting system. The purpose is manage and use email templates when responding to online report submissions <br>
-            </p>
-          </li>
-          <li><b>Osteoporosis Analysis:</b> Data science project that analyzes Osteoporosis data gathered from kaggle.
-            Prepared the data (cleaned and organized into DataFrame), analyzed the data using GroupBy in Python.<br>
-            Data was divided into Train-Test Split to use Machines learning algorithms such as kNN, and Random Forest to conduct further analysis.
-           </li>
-           <li>
-            <b>HeroTyper:</b> A user-friendly game in Kotlin using architecture principles and design patterns to create extensible program.
-           </li>
-           <li>
-            <b>Distributed File System: </b> A distributed file system using FUSE, allowing multiple clients to access and edit shared files locally.
-            Programmed in C++.
-           </li>
-        </ul>
-
-        <blockquote>More Projects on my <a href="https://github.com/alibagher"> <strong>GitHub</strong></a>.</blockquote>
       </section>
     
       <!-- <section id="research">
         <h2>Research</h2>
         <p></p>
       </section> -->
-    
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Reach me at a6bagher [at] uwaterloo [dot] ca or shoot me a message on <a href="https://www.linkedin.com/in/alibagh/"><strong>Linkedin</strong></a></p>
+
+      <section id="projects">
+        <h2>Side Projects</h2>
+          <h4>Pro-Cam Makeup Simulation</h4>
+            <p>
+              Engineered a projector-camera (Pro-Cam) system that utilizes real-time facial feature tracking to dynamically map and project virtual makeup onto physical surfaces. 
+              This project involved integrating computer vision alignment algorithms with projection mapping technology, targeting applications in virtual cosmetic try-ons 
+              and interactive digital art. <strong>Technologies:</strong> Python, Computer Vision, Facial Recognition.</p>
+
+          <h4>Distributed File System</h4>
+          <p>Architected and implemented a distributed file system from scratch utilizing FUSE (Filesystem in Userspace). 
+            Enabled seamless, low-latency local access and real-time synchronization for multiple clients editing shared remote files. 
+            <strong>Technologies:</strong> C++, FUSE, Network Programming.
+          </p>
+
+          <h4>Non-Emergency Reporting & Email Automation System</h4>
+          <p>Developed an end-to-end web application designed to streamline public non-emergency report submissions and automate structured email responses.
+             Built a highly performant, type-safe backend integrated with a relational database, fully containerized for scalable deployment. 
+             <strong>Technologies:</strong> Rust, PostgreSQL, React, Docker.
+          </p>
+
+          <h4>Osteoporosis Predictive Analysis</h4>
+          <p>Leveraged predictive modeling to analyze clinical health data. Engineered the data pipeline by cleaning
+             and structuring complex datasets into optimized dataframes, performed granular exploratory data analysis, and trained evaluated 
+             Machine Learning models (kNN and Random Forest) to predict risk factors. <strong>Technologies:</strong> Python, Scikit-Learn, Pandas, Machine Learning.
+          </p>
+          <h4>HeroTyper</h4>
+          <p>Designed and built an interactive typing game using native mobile or desktop architecture. 
+            Focused heavily on software engineering best practices, applying rigid architecture patterns and design principles to ensure a decoupled, 
+            easily extensible, and maintainable codebase. <strong>Technologies:</strong> Kotlin, Software Design Patterns.
+          </p>
+
+        <blockquote>More Projects on my <a href="https://github.com/alibagher" target="_blank"> <bold>GitHub</bold></a></blockquote>
       </section>
+
+      <section id="Blog">
+        <h2>Blog</h2>
+        <p>Coming soon!</p>
+      </section>
+    
+      <!-- <section id="contact">
+        <h2>Contact</h2>
+        <p>Reach me at a6bagher [at] uwaterloo [dot] ca or shoot me a message on <a href="https://www.linkedin.com/in/alibagh/" target="_blank"><strong>Linkedin</strong></a></p>
+      </section> -->
 
       <footer>
         <!-- <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p> -->
-        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Theme by <a href="https://github.com/orderedlist" target="_blank" >orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
