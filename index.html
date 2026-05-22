@@ -12,6 +12,9 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="icon" href="docs/favicon.ico" type="image/x-icon">
+    <style>
+      #more {display: none;}
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -65,10 +68,12 @@
       <section id="projects">
         <h2>Side Projects</h2>
           <h3>Pro-Cam Makeup Simulation</h3>
+          <span id="dots"></span><span id="more">
             <p>
               Engineered a projector-camera (Pro-Cam) system that utilizes real-time facial feature tracking to dynamically map and project virtual makeup onto physical surfaces. 
               This project involved integrating computer vision alignment algorithms with projection mapping technology, targeting applications in virtual cosmetic try-ons 
-              and interactive digital art. <strong>Technologies:</strong> Python, Computer Vision, Facial Recognition.</p>
+              and interactive digital art. 
+              <strong>Technologies:</strong> Python, Projector, Camera</p>
             
           <h3>Distributed File System</h3>
           <p>Architected and implemented a distributed file system from scratch utilizing FUSE (Filesystem in Userspace). 
@@ -93,7 +98,10 @@
             easily extensible, and maintainable codebase. <strong>Technologies:</strong> Kotlin, Software Design Patterns.
           </p>
 
-        <blockquote>More Projects on my <a href="https://github.com/alibagher" target="_blank"> <bold>GitHub</bold></a></blockquote>
+          </span>
+          <button class="button-3d" onclick="myFunction()" id="myBtn">Read more</button>
+
+        <!-- <blockquote>More Projects on my <a href="https://github.com/alibagher" target="_blank"> <bold>GitHub</bold></a></blockquote> -->
       </section>
 
       <section id="Blog">
@@ -136,6 +144,25 @@
       }
       window.addEventListener('load',  syncBannerOffset);
       window.addEventListener('resize', syncBannerOffset);
+    </script>
+
+    <!-- read more function -->
+    <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
     </script>
 
   
