@@ -50,14 +50,14 @@
 
       <section id="about">
         <!-- <h2>About</h2> -->
-        <p>I am a Master's student in Computer Science at the University of Guelph, specializing in the intersection of Human-Computer Interaction (HCI), Computer Graphics, and Augmented Reality. </p>
-        <p>I earned my Bachelor of Computer Science from the <a href="https://uwaterloo.ca" target="_blank">University of Waterloo</a> and gained industry experience in embedded systems programming and full-stack development.</p>
+        <p>I am a Master's student in Computer Science at the University of Guelph, specializing in Computer Graphics and Human-Computer Interaction. </p>
+        <p>I earned my Bachelor of Computer Science from the <a href="https://uwaterloo.ca" target="_blank">University of Waterloo</a> and gained 4 years of industry experience in embedded systems programming and full-stack development.</p>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
         <p>I spearheaded the development of a custom radiology software solution for a healthcare clinic in Ontario, and later at Ford Motor Company, I engineered internal tools and optimized their Chromium-based web engine.</p>
-        <p>My experience includes multiple diverse software engineering internships.</p>
+        <p>I've also gained experience through a variety of software engineering internships.</p>
         <blockquote>
           <p>Check out my  <a href="https://drive.google.com/file/d/1eGK8fk5yaf8ACUHkXCcPKbgUAOsQr3dW/view?usp=sharing" target="_blank">CV</a> </p>
           <!-- <p>More details on my <a href="/docs/CV_Ali_Bagheri.pdf">CV</a> </p> -->
@@ -71,38 +71,46 @@
 
       <section id="projects">
         <h2>Side Projects</h2>
-          <h3>Pro-Cam Makeup Simulation</h3>
-          <span id="dots"></span><span id="more">
-            <p>
-              Engineered a projector-camera (Pro-Cam) system that utilizes real-time facial feature tracking to dynamically map and project virtual makeup onto physical surfaces. 
-              This project involved integrating computer vision alignment algorithms with projection mapping technology, targeting applications in virtual cosmetic try-ons 
-              and interactive digital art. 
-              <strong>Technologies:</strong> Python, Projector, Camera</p>
-            
-            
+          <div class="project">
+            <h3>Pro-Cam Makeup Simulation</h3>
+              <p class="more-text">
+                Engineered a projector-camera (Pro-Cam) system that utilizes real-time facial feature tracking to dynamically map and project virtual makeup onto physical surfaces. 
+                This project involved integrating computer vision alignment algorithms with projection mapping technology, targeting applications in virtual cosmetic try-ons 
+                and interactive digital art. 
+                <strong>Technologies:</strong> Python, Projector, Camera</p>
+          </div>
 
-          <h3>Distributed File System</h3>
-          <p>Architected and implemented a distributed file system from scratch utilizing FUSE (Filesystem in Userspace). 
-            Enabled seamless, low-latency local access and real-time synchronization for multiple clients editing shared remote files. 
-            <strong>Technologies:</strong> C++, FUSE, Network Programming.
-          </p>
+          <div class="project">
+            <h3>Distributed File System</h3>
+            <p class="more-text">Architected and implemented a distributed file system from scratch utilizing FUSE (Filesystem in Userspace). 
+              Enabled seamless, low-latency local access and real-time synchronization for multiple clients editing shared remote files. 
+              <strong>Technologies:</strong> C++, FUSE, Network Programming.
+            </p>
+          </div>
 
-          <h3>Non-Emergency Reporting & Email Automation System</h3>
-          <p>Developed an end-to-end web application designed to streamline public non-emergency report submissions and automate structured email responses.
-             Built a highly performant, type-safe backend integrated with a relational database, fully containerized for scalable deployment. 
-             <strong>Technologies:</strong> Rust, PostgreSQL, React, Docker.
-          </p>
+          <div class="project">
+            <h3>Non-Emergency Reporting & Email Automation System</h3>
+            <p class="more-text">Developed an end-to-end web application designed to streamline public non-emergency report submissions and automate structured email responses.
+              Built a highly performant, type-safe backend integrated with a relational database, fully containerized for scalable deployment. 
+              <strong>Technologies:</strong> Rust, PostgreSQL, React, Docker.
+            </p>
+          </div>
 
-          <h3>Osteoporosis Predictive Analysis</h3>
-          <p>Leveraged predictive modeling to analyze clinical health data. Engineered the data pipeline by cleaning
-             and structuring complex datasets into optimized dataframes, performed granular exploratory data analysis, and trained evaluated 
-             Machine Learning models (kNN and Random Forest) to predict risk factors. <strong>Technologies:</strong> Python, Scikit-Learn, Pandas, Machine Learning.
-          </p>
-          <h3>HeroTyper</h3>
-          <p>Designed and built an interactive typing game using native mobile or desktop architecture. 
-            Focused heavily on software engineering best practices, applying rigid architecture patterns and design principles to ensure a decoupled, 
-            easily extensible, and maintainable codebase. <strong>Technologies:</strong> Kotlin, Software Design Patterns.
-          </p>
+          <div class="project">
+            <h3>Osteoporosis Predictive Analysis</h3>
+            <p class="more-text">Leveraged predictive modeling to analyze clinical health data. Engineered the data pipeline by cleaning
+              and structuring complex datasets into optimized dataframes, performed granular exploratory data analysis, and trained evaluated 
+              Machine Learning models (kNN and Random Forest) to predict risk factors. <strong>Technologies:</strong> Python, Scikit-Learn, Pandas, Machine Learning.
+            </p>
+          </div>
+
+          <div class="project">
+            <h3>HeroTyper</h3>
+            <p class="more-text">Designed and built an interactive typing game using native mobile or desktop architecture. 
+              Focused heavily on software engineering best practices, applying rigid architecture patterns and design principles to ensure a decoupled, 
+              easily extensible, and maintainable codebase. <strong>Technologies:</strong> Kotlin, Software Design Patterns.
+            </p>
+          </div>
 
           </span>
           <button class="button-3d" onclick="myFunction()" id="myBtn">Read more</button>
@@ -154,21 +162,25 @@
 
     <!-- read more function -->
     <script>
-    function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
+      function myFunction() {
+        var moreTextElements = document.querySelectorAll(".more-text");
+        var btnText = document.getElementById("myBtn");
 
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more"; 
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less"; 
-        moreText.style.display = "inline";
+        // Check the current state of the first element
+        if (moreTextElements[0].style.display === "block") {
+          // Collapse all descriptions
+          moreTextElements.forEach(function(el) {
+            el.style.display = "none";
+          });
+          btnText.innerHTML = "Read more";
+        } else {
+          // Expand all descriptions
+          moreTextElements.forEach(function(el) {
+            el.style.display = "block";
+          });
+          btnText.innerHTML = "Read less";
+        }
       }
-    }
     </script>
 
   

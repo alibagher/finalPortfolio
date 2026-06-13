@@ -347,3 +347,7 @@ section {
     position:relative;
     top:4px;
 }
+
+.more-text {
+  display: none;
+}
